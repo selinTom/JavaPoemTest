@@ -34,6 +34,7 @@ class MyViewGroup:ConstraintLayout {
 //
 //        super.onLayout(changed, left, top, right, bottom)
 //    }
+    //==============================================
 //
 //    override fun drawChild(canvas: Canvas?, child: View?, drawingTime: Long): Boolean {
 //        Log.i("RROREE", " parent  drawChild")
