@@ -11,6 +11,8 @@ import androidx.annotation.Nullable;
  */
 
 public class MyView extends View {
+
+
     public MyView(Context context) {
         super(context);
     }
@@ -28,7 +30,6 @@ public class MyView extends View {
         this.name = name;
 
     }
-
 //    @Override
 //    protected void onAttachedToWindow() {
 //        Log.i("RROREE",name+" child  onAttachedToWindow");
@@ -67,5 +68,4 @@ public class MyView extends View {
 //        }
 //        super.onDraw(canvas);
 //    }
-
 }
