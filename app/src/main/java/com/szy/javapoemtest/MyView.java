@@ -33,6 +33,9 @@ public class MyView extends View {
         this.name = name;
 
     }
+
+    //do something 2
+
 //    @Override
 //    protected void onAttachedToWindow() {
 //        Log.i("RROREE",name+" child  onAttachedToWindow");
