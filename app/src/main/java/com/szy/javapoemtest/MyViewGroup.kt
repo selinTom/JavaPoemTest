@@ -20,6 +20,7 @@ class MyViewGroup:ConstraintLayout {
      )
     //dsadasdasdasd
     //sadasdasdasda
+    //AAAAAAA
 //    override fun onDraw(canvas: Canvas?) {
 //        Log.i("RROREE", " parent  onDraw    canvas:"+canvas?.toString())
 //
