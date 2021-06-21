@@ -1,0 +1,120 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+
+
+}
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('D:\\Android\\project\\JavaPoemTest\\app\\keystore\\test.jks')
+            storePassword 'testapk'
+            keyAlias 'test_key'
+            keyPassword 'test2021415'
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+//
+//    buildFeatures {
+//        compose true
+//    }
+
+//    signingConfigs{
+//        release {
+//            storeFile file('keystore/test.jks')
+//            storePassword 'testapk'
+//            keyAlias 'test_key'
+//            keyPassword 'test2021415'
+//
+//        }
+//
+//    }
+
+    defaultConfig {
+        applicationId "com.szy.javapoemtest"
+        minSdkVersion 27
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+
+dependencies {
+    annotationProcessor project(':compile')
+    implementation project(':annotations')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation "androidx.compose.ui:ui:$compose"
+    // Tooling support (Previews, etc.)
+    implementation "androidx.compose.ui:ui-tooling:$compose"
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation "androidx.compose.foundation:foundation:$compose"
+    // Material Design
+    implementation "androidx.compose.material:material:$compose"
+    // Material design icons
+    implementation "androidx.compose.material:material-icons-core:$compose"
+    implementation "androidx.compose.material:material-icons-extended:$compose"
+    // Integration with observables
+    implementation "androidx.compose.runtime:runtime-livedata:$compose"
+    implementation "androidx.compose.runtime:runtime-rxjava2:$compose"
+
+    // UI Tests
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose"
+
+    
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation "com.google.code.gson:gson:2.8.4"
+
+    ext{
+        lifecycle = "2.2.0"
+
+    }
+
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-compiler:$lifecycle"
+
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle"
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.1'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.4.21"
+
+    implementation "androidx.activity:activity-ktx:1.2.2"
+    implementation "androidx.fragment:fragment-ktx:1.3.2"
+
+
+}

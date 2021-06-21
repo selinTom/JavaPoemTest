@@ -1,0 +1,25 @@
+{
+         "id": 1,
+         "pic_url": "https://img.haohaozhu.cn/Op-imageShow/9ed70213y0u00QE00qqeu9y?iv=1",
+         "info": "晒出第一张图，领取装修预算表",
+         "extra_info": "首次在好好住发布内容，即可私信领取装修预算表，请关注好好住导游私信哦",
+         "btn_info": "选择图片或视频",
+         "link": "niceliving://editor/create?type=note",
+         "error":[],
+         "list":[
+            {
+                "id":1
+            },
+            {
+                 "id":2
+            },
+            {
+                 "id":3
+             },
+            {
+                "id":4
+            }
+         ],
+         "obj_id":[]
+
+}

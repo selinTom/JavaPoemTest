@@ -1,0 +1,4 @@
+include ':compile'
+include ':annotations'
+include ':app'
+rootProject.name = "JavaPoemTest"
