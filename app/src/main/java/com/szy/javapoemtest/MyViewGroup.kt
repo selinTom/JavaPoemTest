@@ -18,6 +18,8 @@ class MyViewGroup:ConstraintLayout {
          attrs,
          defStyleAttr
      )
+    //dsadasdasdasd
+
 //    override fun onDraw(canvas: Canvas?) {
 //        Log.i("RROREE", " parent  onDraw    canvas:"+canvas?.toString())
 //
@@ -29,6 +31,7 @@ class MyViewGroup:ConstraintLayout {
 //
 //        super.onLayout(changed, left, top, right, bottom)
 //    }
+    //==============================================
 //
 //    override fun drawChild(canvas: Canvas?, child: View?, drawingTime: Long): Boolean {
 //        Log.i("RROREE", " parent  drawChild")
