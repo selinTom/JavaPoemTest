@@ -42,5 +42,4 @@ class MyViewGroup:ConstraintLayout {
 //        Log.i("RROREE", " parent  draw")
 //        super.draw(canvas)
 //    }
-
 }
