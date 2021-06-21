@@ -30,7 +30,6 @@ public class MyView extends View {
         this.name = name;
 
     }
-
 //    @Override
 //    protected void onAttachedToWindow() {
 //        Log.i("RROREE",name+" child  onAttachedToWindow");
