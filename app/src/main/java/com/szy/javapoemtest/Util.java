@@ -10,6 +10,7 @@ import java.io.StringWriter;
  */
 
 public class Util {
+
     public static String getErrorInfoFromException(Throwable e) {
         try {
             StringWriter sw = new StringWriter();

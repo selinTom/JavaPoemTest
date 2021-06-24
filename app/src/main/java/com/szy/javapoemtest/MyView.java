@@ -25,9 +25,6 @@ public class MyView extends View {
         super(context, attrs, defStyleAttr);
     }
 
-    //do something 1
-
-
     private String name = "";
     public void  setName(String name){
         this.name = name;

@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
+import java.util.concurrent.ConcurrentHashMap
 
 /**
  * Created by devov on 2021/3/11.
@@ -44,6 +45,8 @@ class MyViewGroup:ConstraintLayout {
 //        Log.i("RROREE", " parent  draw")
 //        super.draw(canvas)
 //    }
+    init{
+    }
 
 
 //todo something 2

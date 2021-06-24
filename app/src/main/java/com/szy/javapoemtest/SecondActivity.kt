@@ -39,6 +39,41 @@ class SecondActivity: AppCompatActivity(),Choreographer.FrameCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 //        Log.i("RROREE","SecondActivity  onCreate")
+        var i = 0
+        thread {
+            while (true){
+                synchronized(this){
+                    System.out.println("thread 1----->${i}")
+                }
+                Thread.yield()
+
+            }
+        }
+
+        thread {
+            while (true){
+                synchronized(this) {
+                    System.out.println("thread 2 ---------------->${i}")
+                }
+                Thread.yield()
+            }
+        }
+
+        thread {
+            var j = 0
+            while (true){
+                synchronized(this) {
+                    j++
+                    i = j
+                    System.out.println("thread 3 ------------------------------------->${i}")
+                }
+                Thread.yield()
+            }
+        }
+
+
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
         Toast.makeText(applicationContext.applicationContext,"hahhaha",Toast.LENGTH_LONG).show()

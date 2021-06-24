@@ -134,6 +134,8 @@ class Adapter(private val context: Context):PagerAdapter(){
         initRecyclerView(data3)
     }
 
+    private val pool = RecyclerView.RecycledViewPool()
+
     private val rvList by lazy{
         arrayOf(rv1, rv2,rv3,rv4, rv5,rv6,rv7, rv8,rv9)
     }
@@ -159,6 +161,7 @@ class Adapter(private val context: Context):PagerAdapter(){
 
     private fun initRecyclerView(data: List<Int>):RecyclerView{
         return RecyclerView(context).apply {
+            setRecycledViewPool(pool)
             layoutParams = ViewPager.LayoutParams().apply {
                 width = ViewGroup.LayoutParams.MATCH_PARENT
                 height = 300*(data.size/5 + if(data.size%5 ==0)0 else 1)
@@ -200,7 +203,14 @@ class ItemAdapter(private val mDataList: List<Int>):RecyclerView.Adapter<MyViewH
 class MyViewHolder(view: View):RecyclerView.ViewHolder(view){
 
      fun bindViewHolder(index: Int){
-        itemView.findViewById<TextView>(R.id.tv).text = "$index"
+        itemView.findViewById<TextView>(R.id.tv).apply {
+            text = "$index"
+            setOnClickListener {
+                text = "$text$"
+
+            }
+        }
+
     }
 
 }
